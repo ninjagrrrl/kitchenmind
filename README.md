@@ -10,6 +10,24 @@ The goal is to reduce everyday decision friction around cooking.
 
 ---
 
+# Status
+
+This project is currently a work in progress.
+
+The current version demonstrates:
+• authentication flow (Supabase Auth)
+• basic recipe data handling
+• initial application architecture
+
+The focus is currently on:
+• frontend architecture cleanup
+• UX refinement
+• building a consistent UI system
+
+This project is actively developed as a portfolio project with a focus on frontend architecture and UX.
+
+---
+
 # The Problem
 
 After a long workday many people experience decision fatigue when choosing what to cook.
