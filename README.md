@@ -22,7 +22,7 @@ The current version demonstrates:
 The focus is currently on:
 • frontend architecture cleanup
 • UX refinement
-• building a consistent UI system
+• building a consistent UI system (planned with Tailwind CSS)
 
 This project is actively developed as a portfolio project with a focus on frontend architecture and UX.
 
@@ -109,7 +109,12 @@ Supabase (Auth + PostgreSQL)
 
 UI
 
-Tailwind CSS  
+Planned:
+
+Tailwind CSS (for a structured and scalable design system)
+
+Currently exploring:
+
 shadcn/ui  
 Radix UI
 

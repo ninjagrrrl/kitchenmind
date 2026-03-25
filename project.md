@@ -96,7 +96,7 @@ This allows the project to use a production-ready backend without building a cus
 
 ## UI System
 
-Tailwind CSS – utility-first styling
+A structured UI layer is planned using Tailwind CSS (utility-first styling) to ensure consistency and scalability.
 
 shadcn/ui – accessible UI components copied directly into the project
 
