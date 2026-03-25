@@ -10,7 +10,21 @@ The goal is to reduce everyday decision friction around cooking.
 
 ---
 
-# Status
+## Concept
+
+KitchenMind explores how systems can guide decisions without overwhelming users — by reducing options instead of expanding them.
+
+Instead of offering endless choices, the system is built around a simple loop:
+
+→ one suggestion
+→ one decision
+→ immediate action
+
+This shifts cooking from a browsing problem to a decision system.
+
+---
+
+## Status
 
 This project is currently a work in progress.
 
@@ -19,16 +33,16 @@ The current version demonstrates:
 • basic recipe data handling
 • initial application architecture
 
-The focus is currently on:
+Current focus:
 • frontend architecture cleanup
 • UX refinement
 • building a consistent UI system (planned with Tailwind CSS)
 
-This project is actively developed as a portfolio project with a focus on frontend architecture and UX.
+This project is actively developed as a portfolio project with a focus on frontend architecture, UX, and product thinking.
 
 ---
 
-# The Problem
+## The Problem
 
 After a long workday many people experience decision fatigue when choosing what to cook.
 
@@ -42,7 +56,7 @@ Start from the ingredients — not from the recipes.
 
 ---
 
-# Core Idea
+## Core Idea
 
 KitchenMind acts like a lightweight cooking assistant.
 
@@ -54,15 +68,30 @@ The system then suggests a concrete recipe based on those ingredients.
 
 Users can:
 
-• accept the suggestion  
-• generate another suggestion  
+• accept the suggestion
+• generate another suggestion
 • save the recipe to their personal cookbook
 
 Over time the application becomes a personal cooking knowledge base.
 
 ---
 
-# Core Features
+## Design Principle
+
+One deliberate UX decision is that the system generates **only one recipe suggestion at a time**.
+
+Instead of presenting many options, users simply decide:
+
+• cook this
+• show another suggestion
+
+This interaction model reduces cognitive load and supports fast decision-making.
+
+Each suggestion can include a short explanation ("Why this works") to build trust and reduce hesitation.
+
+---
+
+## Core Features
 
 ### Ingredient-based recipe suggestions
 
@@ -78,61 +107,54 @@ When inspiration is missing, the system generates cooking ideas based on availab
 
 ---
 
-# Design Principle
-
-One deliberate UX decision is that the system generates **only one recipe suggestion at a time**.
-
-Instead of presenting many options, users simply decide:
-
-• cook this  
-• show another suggestion
-
-This interaction model reduces cognitive load and keeps the decision process simple.
-
----
-
-# Tech Stack
+## Tech Stack
 
 Frontend
-
-React  
-TypeScript  
+React
+TypeScript
 Vite
 
 State Management
-
 TanStack Query
 
 Backend
-
 Supabase (Auth + PostgreSQL)
 
-UI
-
-Planned:
-
-Tailwind CSS (for a structured and scalable design system)
-
-Currently exploring:
-
-shadcn/ui  
+UI (planned)
+Tailwind CSS
+shadcn/ui
 Radix UI
 
 ---
 
-# Development Goals
+## Development Goals
 
 This project was built as a portfolio project to explore:
 
-• clean frontend architecture  
-• thoughtful UX design  
-• integration of AI-generated content  
+• clean frontend architecture
+• thoughtful UX design
+• integration of AI-generated content
 • structured personal data systems
 
 ---
 
-# Future Ideas
+## Learning
 
-• AI cooking tips attached to recipes  
-• different interaction modes (ingredient mode, low-energy mode, healthy mode)  
-• smarter recipe suggestions based on past cooking behavior
+KitchenMind is intentionally built as an evolving system, not a finished product.
+
+Through building it, I explore:
+
+• how to move from abstract ideas to concrete features
+• how to structure complexity instead of avoiding it
+• how to ship incomplete but functional iterations
+
+This reflects my general approach to development:
+Building systems that remain usable and adaptable — even when they are not fully resolved.
+
+---
+
+## Future Ideas
+
+• AI cooking tips attached to recipes
+• different interaction modes (ingredient mode, low-energy mode, healthy mode)
+• smarter suggestions based on past cooking behavior
