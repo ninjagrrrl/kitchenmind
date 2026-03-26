@@ -1,73 +1,105 @@
 # Development Log
 
-### Day 1 — Project Reassessment
+## Day 1 — Project Reassessment
 
-The project originally started as a bootcamp assignment.  
-When revisiting the codebase several months later, the goal was to evaluate whether the project could be evolved into a portfolio-quality application.
-
-The first step was therefore to stabilize the architecture and review the current project structure.
+The project originally started as a bootcamp assignment and was revisited with the goal of turning it into a portfolio-quality application.
 
 ---
 
-### Architecture Cleanup
+### Architecture Stabilization
 
-Several structural issues were resolved before continuing development:
+- removed duplicated / unused Supabase client instances
+- cleaned up dependencies
+- resolved TypeScript build issues
 
-- removed unused or duplicated Supabase client files
-- cleaned up project dependencies
-- resolved TypeScript build errors
-- fixed incorrect `import type` statements caused by strict TypeScript settings
-
-A full production build (`npm run build`) was used to verify that the project compiled successfully.
+A successful production build (`npm run build`) confirmed a stable baseline.
 
 ---
 
-### Project Structure Review
+### Structure Review
 
-The existing component structure was analyzed to understand how UI components and feature logic were currently organized.
+The existing component structure was analyzed to understand how UI and feature logic are organized.
 
-Observations:
+Key observation:
 
-- feature components and UI components were partially mixed
-- shadcn/ui components were copied directly into the project
-- TanStack Query was used only for some data fetching operations
-
-This review helped clarify where architectural improvements could be made.
+- inconsistent separation between UI components and feature logic
 
 ---
 
-### Data Layer Analysis
+### Data Layer Assessment
 
-The project currently mixes two approaches for server state:
+The project currently mixes:
 
-- direct Supabase calls inside `useEffect`
-- TanStack Query for some requests
+- direct Supabase calls (`useEffect`)
+- TanStack Query
 
-While functional, this leads to inconsistent data handling.
-
-A future improvement will be to unify server state management using TanStack Query.
+This leads to inconsistent data handling and will be unified in a later step.
 
 ---
 
-### Product Concept Refinement
+### Product Direction
 
-During the reassessment process the product idea was also clarified.
+The project was reframed from a simple recipe manager into an **AI-assisted cooking decision system**.
 
-Instead of treating the application as a simple recipe manager, the concept evolved into an **AI-assisted personal cooking system**.
+Focus:
 
-The goal is to help users reduce decision friction by turning available ingredients into concrete meal suggestions while building a personal recipe collection over time.
+- reduce decision friction
+- generate one concrete recipe suggestion at a time
+- build a personal recipe knowledge base
 
 ---
-
-### Project Documentation
-
-Before continuing feature development, a structured `project.md` document was created to capture:
-
-- product goals
-- UX principles
-- architecture decisions
-- development notes
 
 ## Key outcome of Day 1:
 
-Project architecture stabilized and product concept clarified.
+Stabilized the architecture and clarified the product direction.
+
+## Day 2 — Supabase Reconnection & Infrastructure Setup
+
+The original Supabase project had been paused and could not be restored.
+
+A new project was created to establish a clean backend foundation.
+
+---
+
+### Backend Setup
+
+- new Supabase project initialized
+- environment variables configured (`.env.local`)
+- `.env.example` added for reproducibility
+- Supabase client reconnected
+
+A missing table (`recipes`) caused initial 404 errors, which were resolved by:
+
+- creating the table
+- enabling Row Level Security (RLS)
+- adding a temporary read policy
+
+---
+
+### Data Layer Reset
+
+Instead of reusing the previous schema, a simplified `recipes` table was introduced.
+
+This reflects a shift away from a traditional recipe listing (e.g. ratings) toward a decision-focused cooking system aligned with the KitchenMind concept.
+
+---
+
+### Frontend Adjustment
+
+- simplified data fetching to a single query
+- removed outdated assumptions (e.g. rating-based sorting)
+- aligned UI with current schema
+
+---
+
+### Build Verification
+
+The project builds successfully:
+
+`npm run build`
+
+---
+
+## Key outcome of Day 2:
+
+Re-established a working backend connection and a minimal, stable data flow.
