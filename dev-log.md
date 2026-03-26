@@ -103,3 +103,20 @@ The project builds successfully:
 ## Key outcome of Day 2:
 
 Re-established a working backend connection and a minimal, stable data flow.
+
+## Day 3 — CI Setup
+
+A minimal CI pipeline was added using GitHub Actions.
+
+The workflow runs on every push and pull request and performs:
+
+- dependency installation (`npm ci`)
+- production build (`npm run build`)
+
+Environment variables are provided via GitHub repository secrets.
+
+---
+
+## Key outcome of Day 3:
+
+The project now has a reproducible build process with automated validation.
